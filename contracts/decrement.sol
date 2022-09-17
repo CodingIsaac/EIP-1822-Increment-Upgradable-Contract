@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 import "./proxiable.sol";
 
-contract Increment is Proxiable {
+contract Decrement is Proxiable {
     address public owner;
     uint public count;
 
@@ -19,6 +19,10 @@ contract Increment is Proxiable {
 
     function increment() public {
         count++;
+    }
+
+    function decrement() public {
+        count--;
     }
     function updatecode(address newAddress) onlyOwner public {
         updateCodeAddress(newAddress);
