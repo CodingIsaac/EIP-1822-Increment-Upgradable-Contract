@@ -1,13 +1,15 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const incremement = await ethers.getContractFactory("Increment");
-  const Increment = await incremement.deploy();
-  await Increment.deployed();
+  const decerCode = await ethers.getContractFactory("Decrement");
+  const codeDer = await decerCode.deploy();
+  await codeDer.deployed();
 
-  console.log("Increment deployed here: ", Increment.address);
+  console.log("codeDer deployed here: ", codeDer.address);
 
   // Increment deployed here:  0x027F39B5d1B28BEfB6e7345010b99Ca5ad2e3756
+
+//   codeDer deployed here:  0x3f80b5143DF12fD4F24A7616704352bF392dfb25
   
 }
 
